@@ -164,46 +164,6 @@ export default function Dashboard() {
         </section>
       </div>
 
-      {/* Doctor Profile Quick Access */}
-      <section className="soft-ui-card bg-gradient-to-br from-primary/5 to-secondary-container/30 p-6 md:p-8 rounded-3xl border-2 border-primary/20">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white shadow-lg">
-              <span className="material-symbols-outlined text-3xl">person</span>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold text-primary font-[Public_Sans]">Dr. Deepak Kumar — MOIC</h4>
-              <p className="text-sm text-on-surface-variant">CHC Nanpur, Sitamarhi · View full professional profile</p>
-            </div>
-          </div>
-          <button
-            onClick={() => navigate('/doctor-profile')}
-            className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-xl text-sm font-bold hover:opacity-90 transition-all shadow-md whitespace-nowrap"
-          >
-            <span className="material-symbols-outlined text-sm">open_in_new</span>
-            View Doctor Profile
-          </button>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          <div className="bg-white/60 p-3 rounded-xl text-center">
-            <p className="text-xs text-on-surface-variant">Designation</p>
-            <p className="text-sm font-bold text-primary">MOIC</p>
-          </div>
-          <div className="bg-white/60 p-3 rounded-xl text-center">
-            <p className="text-xs text-on-surface-variant">Contact</p>
-            <p className="text-sm font-bold text-primary">8877556142</p>
-          </div>
-          <div className="bg-white/60 p-3 rounded-xl text-center">
-            <p className="text-xs text-on-surface-variant">Facility</p>
-            <p className="text-sm font-bold text-primary">CHC Nanpur</p>
-          </div>
-          <div className="bg-white/60 p-3 rounded-xl text-center">
-            <p className="text-xs text-on-surface-variant">Block</p>
-            <p className="text-sm font-bold text-primary">Nanpur, Sitamarhi</p>
-          </div>
-        </div>
-      </section>
-
       {/* AI Block Review */}
       <section className="soft-ui-card bg-[#e0f2f1] p-6 md:p-8 rounded-3xl border-2 border-primary/10">
         <div className="flex items-center gap-3 mb-4">

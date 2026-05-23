@@ -9,7 +9,6 @@ const navItems = [
   { path: '/delivery', label: 'Institutional Delivery', icon: 'local_hospital' },
   { path: '/zero-board', label: 'Zero Board', icon: 'error_outline' },
   { path: '/ai-summary', label: 'AI Review Notes', icon: 'smart_toy' },
-  { path: '/doctor-profile', label: 'Doctor Profile', icon: 'person' },
 ];
 
 const navTabs: Record<string, { path: string; label: string }[]> = {
@@ -40,18 +39,15 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
     <div className="flex flex-col h-full w-72 bg-surface-container-low transition-all duration-300">
       <div className="p-6">
         <h1 className="text-xl font-bold text-primary mb-6 font-[Public_Sans]">Bihar Health</h1>
-        <button
-          onClick={() => handleNav('/doctor-profile')}
-          className="flex items-center gap-3 p-3 mb-8 w-full bg-surface-container-highest rounded-xl hover:bg-primary-container/20 transition-all group"
-        >
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm shadow-md group-hover:scale-105 transition-transform">
-            DD
+        <div className="flex items-center gap-3 p-3 mb-8 bg-surface-container-highest rounded-xl">
+          <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold text-sm">
+            {user?.name?.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase() || 'MS'}
           </div>
-          <div className="min-w-0 text-left">
-            <p className="text-sm font-semibold text-on-surface truncate">Dr. Deepak Kumar</p>
-            <p className="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold truncate">MOIC · CHC Nanpur</p>
+          <div className="min-w-0">
+            <p className="text-sm font-semibold text-on-surface truncate">{user?.name || 'Medical Supervisor'}</p>
+            <p className="text-[10px] uppercase tracking-wider text-on-surface-variant font-bold truncate">{user?.facility || 'CHC Nanpur Block'}</p>
           </div>
-        </button>
+        </div>
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;

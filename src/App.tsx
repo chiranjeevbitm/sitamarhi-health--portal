@@ -7,7 +7,6 @@ import AnaemiaTracker from './pages/AnaemiaTracker';
 import DeliveryMonitoring from './pages/DeliveryMonitoring';
 import ZeroBoard from './pages/ZeroBoard';
 import AiSummary from './pages/AiSummary';
-import DoctorProfile from './pages/DoctorProfile';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated } = useAuth();
@@ -25,7 +24,6 @@ export default function App() {
       <Route path="/delivery" element={<ProtectedRoute><DeliveryMonitoring /></ProtectedRoute>} />
       <Route path="/zero-board" element={<ProtectedRoute><ZeroBoard /></ProtectedRoute>} />
       <Route path="/ai-summary" element={<ProtectedRoute><AiSummary /></ProtectedRoute>} />
-      <Route path="/doctor-profile" element={<ProtectedRoute><DoctorProfile /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );
