@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-05-22T17:48:26.000000",
+  "description": "Updated reference data from extraction. All functional data moved to mockData.ts. This file serves as an archive of the raw extraction output.",
+  "source_files": [
+    "E mp Detail PHC NANPUR SITAMARHI20260521_10111486.pdf",
+    "PHC NANPUR SITAMARHI Resent.pdf",
+    "PHC NANPUR SITAMARHI20260521_10173843.pdf",
+    "PHC NANPUR SITAMARHI20260521_10184426.pdf",
+    "Presentation_Health_Review_Meeting_19.03.26.pptx",
+    "Presentation_Health_Review_Meeting_21.04.26.pdf",
+    "Presentation_Health_Review_Meeting_24.01.2026(2).pptx",
+    "validation_report_latest.txt",
+    "pipeline_report.txt"
+  ],
+  "data_updated_in": "mockData.ts"
+}
